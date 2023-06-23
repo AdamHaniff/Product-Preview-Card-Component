@@ -1,0 +1,167 @@
+/* Color scheme 
+Pure white - #FFFFFF
+Cream - #F2EAE2
+Deep Aquamarine - #3D8168
+Deep Aquamarine hover - #1A4032
+Gunmetal - #1C232B
+Aurometal Saurus - #6C7289
+*/
+
+/* Text Styles 
+Display - Fruances - bold 32px
+Body - Montserrat - medium 14px
+Button Text - Montserrat - bold 14px
+Overline - Montserrat - medium 12px
+*/
+
+:root {
+  /* Colors */
+  --pureWhite: #ffffff;
+  --cream: #f2eae2;
+  --deepAquamarine: #3d8168;
+  --deepAquamarineHover: #1a4032;
+  --gunmetal: #1c232b;
+  --aurometal: #6c7289;
+
+  /* Font family */
+  --fraunces: "Fraunces", serif;
+  --montserrat: "Montserrat", sans-serif;
+
+  /*Font weight */
+  --fw500: 500;
+  --fw700: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--cream);
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  margin: 2rem;
+}
+
+.product {
+  max-width: 60rem;
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+}
+
+.perfume-img {
+  display: block;
+  max-width: 100%;
+}
+
+.text-content {
+  gap: 1.7rem;
+  background-color: var(--pureWhite);
+  padding: 2.5rem;
+  display: grid;
+}
+
+.perfume {
+  font-family: var(--montserrat);
+  font-weight: var(--fw500);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 15px;
+  letter-spacing: 5px;
+  color: var(--aurometal);
+}
+
+.gabrielle {
+  font-family: var(--fraunces);
+  font-weight: var(--fw700);
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  color: var(--gunmetal);
+}
+
+.floral {
+  font-family: var(--montserrat);
+  font-weight: var(--fw500);
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: var(--aurometal);
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.new-price {
+  font-family: var(--fraunces);
+  font-weight: var(--fw700);
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  color: var(--deepAquamarine);
+}
+
+.old-price {
+  font-family: var(--montserrat);
+  font-weight: var(--fw500);
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  text-decoration-line: line-through;
+  color: var(--aurometal);
+}
+
+.btn::before {
+  content: "";
+  background-image: url("product-preview-card-component-main/images/icon-cart.svg");
+  width: 1.4rem;
+  height: 1.6rem;
+}
+
+.btn {
+  border: none;
+  font-family: var(--montserrat);
+  font-weight: var(--fw700);
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--pureWhite);
+  border-radius: 8px;
+  background-color: var(--deepAquamarine);
+  padding: 1.5rem 3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+}
+
+.btn:is(:hover, :focus) {
+  cursor: pointer;
+  background-color: var(--deepAquamarineHover);
+}
+
+/* media query */
+@media (min-width: 37.5em) {
+  .product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .text-content {
+    padding: 3rem;
+  }
+  .btn {
+    padding: 1rem 2rem;
+  }
+}
