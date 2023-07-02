@@ -57,7 +57,7 @@ body {
 
 .product {
   max-width: 60rem;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   overflow: hidden;
   display: grid;
 }
@@ -79,8 +79,8 @@ body {
   font-weight: var(--fw500);
   font-size: 1.2rem;
   text-transform: uppercase;
-  line-height: 15px;
-  letter-spacing: 5px;
+  line-height: 1.5rem;
+  letter-spacing: 0.5rem;
   color: var(--aurometal);
 }
 
@@ -138,7 +138,7 @@ body {
   font-size: 1.4rem;
   line-height: 1.7rem;
   color: var(--pureWhite);
-  border-radius: 8px;
+  border-radius: 0.8rem;
   background-color: var(--deepAquamarine);
   padding: 1.5rem 3rem;
   display: inline-flex;
